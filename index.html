@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Custom Mihauko Slider</title>
-	<link rel="stylesheet" href="animate.css">
+<!--	<link rel="stylesheet" href="animate.css">-->
+	<link rel="stylesheet" href="ionicons.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,13 +12,28 @@
 		<div class="slider">
 			<div class="items">
 				<div class="item left">
-					<p class="description">Opis 1 Lorem</p>
+<!--					<a  href="http://lorempixel.com/800/400"></a>-->
+					<div class="left-des">
+						<i class="ion ion-ios-arrow-back side-icon"></i>
+						<p class="description">Opis 1 Lorem</p>
+					</div>
 				</div>
 				<div class="item active">
-					<p class="description">Opis 2</p>
+					<div class="active-des">
+						<div class="active-des-icon-left">
+							<i class="ion ion-ios-arrow-back active-icon active-icon-left"></i>
+						</div>
+						<p class="description">Opis 2</p>
+						<div class="active-des-icon-right">
+							<i class="ion-ios-arrow-forward active-icon active-icon-right"></i>
+						</div>
+					</div>
 				</div>
 				<div class="item right">
-					<p class="description">Opis 3</p>
+					<div class="right-des">
+						<i class="ion-ios-arrow-forward side-icon"></i>
+						<p class="description">Opis 3</p>
+					</div>
 				</div>
 			</div>
 			<!-- Not used yet -->

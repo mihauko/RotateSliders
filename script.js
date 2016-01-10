@@ -15,15 +15,15 @@ function changeImg(index){
 	leftIndex += index;
 	leftIndex = checkIndex(listLenght, leftIndex);
 	$('.left').css("background-image", 'url('+sliderList[leftIndex][0]+')');
-	$('.left').children('p').text(sliderList[leftIndex][1]);
+	$('.left  .left-des').children('p').text(sliderList[leftIndex][1]);
 	activeIndex += index;
 	activeIndex = checkIndex(listLenght, activeIndex);
 	$('.active').css("background-image", 'url('+sliderList[activeIndex][0]+')');
-	$('.active').children('p').text(sliderList[activeIndex][1]);
+	$('.active .active-des').children('p').text(sliderList[activeIndex][1]);
 	rightIndex += index;
 	rightIndex = checkIndex(listLenght, rightIndex);
 	$('.right').css("background-image", 'url('+sliderList[rightIndex][0]+')');
-	$('.right').children('p').text(sliderList[rightIndex][1]);
+	$('.right .right-des').children('p').text(sliderList[rightIndex][1]);
 }
 
 function moveImg(){
@@ -40,11 +40,11 @@ function moveImg(){
 	$('.active').css('background-image', 'url('+sliderList[activeIndex][0]+')');
 	$('.right').css('background-image', 'url('+sliderList[rightIndex][0]+')');
 	
-	$('.left').click(function(){
+	$('.left, .active-des-icon-left ').click(function(){
 		var $this = $(this);
 		changeImg(1);
 	});
-	$('.right').click(function(){
+	$('.right, .active-des-icon-right').click(function(){
 		var $this = $(this);
 		changeImg(-1);
 	});

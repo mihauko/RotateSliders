@@ -61,6 +61,10 @@ body {
 	          	background-size: cover;
 	          	
 			}
+			.active-des-icon-left,
+			.active-des-icon-right {
+				display: none;
+			}
 			.slider-container .left,
 			.slider-container .right {
 				width: 30%;
@@ -75,7 +79,7 @@ body {
 					display: none;
 				}
 			.slider-container .left {
-				background-color: green;
+/*				background-color: green;*/
 				
 	          	background-size: cover;
 	          	-webkit-transform: rotate3d(-0.4,2,-0.2,45deg);
@@ -84,6 +88,48 @@ body {
 				     -o-transform: rotate3d(-0.4,2,-0.2,45deg);
 				        transform: rotate3d(-0.4,2,-0.2,45deg);
 			}
+				.slider-container .left .left-des,
+				.slider-container .right .right-des {
+					height: 100%;
+					width: 100%;
+					background-color: rgba(255,255,255, 0.7);
+					z-index: 10;
+					position: relative;
+				}
+					.active-des {
+						height: 100%;
+						width: 100%;
+						background-color: rgba(255,255,255, 0.2);
+					}
+					.active-des .active-des-icon-left,
+					.active-des .active-des-icon-right {
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						width: 15%;
+						background: rgba(255,255,255, 0.7);
+						cursor: pointer;
+					}
+					.active-des .active-des-icon-left{
+						left: 0;		
+					}
+					.active-des .active-des-icon-right{
+						right: 0;
+					}
+						.slider-container .item  i {
+							display: block;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+
+						}
+
+						.slider-container .left .left-des .side-icon,
+						.slider-container .right .right-des .side-icon,
+						.slider-container .active .active-des .active-icon{
+							font-size: 300%;
+						}
 			.slider-container .right {
 				background-color: blue;
 				background: url("") no-repeat center center;
@@ -111,7 +157,15 @@ body {
 	.slider-container .active{
 		width: 100%;
 	}
-
+	.slider-container .item .description {
+		width: 70%;
+	}
+	.active-des-icon-left,
+	.active-des-icon-right
+	{
+		display: block;
+	}
+	
 	.slider-container .left,
 	.slider-container .right 
  	{
